@@ -1,4 +1,4 @@
-package com.mutti.currencyexchangeservice.bean;
+package com.mutti.currencyexchangeservice.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
