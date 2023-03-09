@@ -1,8 +1,7 @@
 package com.mutti.currencyexchangeservice.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
@@ -10,12 +9,16 @@ import java.math.BigDecimal;
 public class CurrencyExchange {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
     @Column(name= "currency_from")
+    @JsonProperty("from")
     private String from;
 
     @Column(name= "currency_to")
+    @JsonProperty("to")
     private String to;
+    @JsonProperty("conversionMultiple")
     private BigDecimal conversionMultiple;
     private String environment;
 
